@@ -39,10 +39,18 @@ This application allows you to track DHL shipments using the DHL Shipment Tracki
 
 ## Usage
 
-1. **User Interaction**
+1. **User Interaction **
 
     ```bash
     streamlit run interface.py
+    ```
+
+    ```bash
+    python dhl_tracking.py
+    ```
+
+    ```bash
+    python dhl_locations.py
     ```
 
 ## Contributors
