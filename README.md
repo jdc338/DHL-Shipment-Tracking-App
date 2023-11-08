@@ -22,13 +22,13 @@ This application allows you to track DHL shipments using the DHL Shipment Tracki
 1. Clone the repository.
 
     ```bash
-    git clone git@github.com:jdc338/DHL-Shipment-Tracking.git
+    git clone git@github.com:jdc338/DHL-Shipment-Tracking-App.git
     ```
 
 2. Navigate into the directory.
 
     ```bash
-    cd DHL-Shipment-Tracking
+    cd DHL-Shipment-Tracking-App
     ```
 
 3. Install the required packages.
