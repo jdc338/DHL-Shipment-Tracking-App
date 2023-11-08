@@ -39,15 +39,15 @@ This application allows you to track the status of shipments using the DHL Shipm
 
 ## Usage
 
-    ```bash
+1.    ```bash
     streamlit run interface.py
     ```
-
-    ```bash
+    
+2.    ```bash
     python dhl_tracking.py
     ```
 
-    ```bash
+3.    ```bash
     python dhl_locations.py
     ```
 
