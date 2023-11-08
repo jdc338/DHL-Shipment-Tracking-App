@@ -16,7 +16,7 @@ def get_dhl_tracking_info(tracking_number, api_key):
     }
 
     try:
-        # Create an HTTPS connection (manually specifying the HTTPS scheme)
+
         connection = http.client.HTTPSConnection("api-eu.dhl.com", context=ssl._create_unverified_context())
 
         connection.request("GET", "/track/shipments?" + params, headers=headers)
@@ -36,10 +36,9 @@ def get_dhl_tracking_info(tracking_number, api_key):
     except Exception as e:
         return f"Request error: {str(e)}"
 
-# Example usage:
 if __name__ == "__main__":
-    tracking_number = "7777777770"  # Replace with your tracking number
-    api_key = env.DHL_API_KEY  # Use the API key from env.py
+    tracking_number = "7777777770"
+    api_key = env.DHL_API_KEY
 
     tracking_info = get_dhl_tracking_info(tracking_number, api_key)
     print(json.dumps(tracking_info, indent=2))
