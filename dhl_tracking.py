@@ -2,19 +2,30 @@ import http.client
 import urllib.parse
 import json
 import env
+<<<<<<< Updated upstream
 import ssl
 
 def get_dhl_tracking_info(tracking_number, api_key):
+=======
+
+def get_dhl_tracking_info(tracking_number, api_key):
+    # Construct the query parameters
+>>>>>>> Stashed changes
     params = urllib.parse.urlencode({
         'trackingNumber': tracking_number,
         'service': 'express'
     })
 
+<<<<<<< Updated upstream
+=======
+    # Define the headers with the API key
+>>>>>>> Stashed changes
     headers = {
         'Accept': 'application/json',
         'DHL-API-Key': api_key
     }
 
+<<<<<<< Updated upstream
     try:
         # Create an HTTPS connection (manually specifying the HTTPS scheme)
         connection = http.client.HTTPSConnection("api-eu.dhl.com", context=ssl._create_unverified_context())
@@ -22,10 +33,25 @@ def get_dhl_tracking_info(tracking_number, api_key):
         connection.request("GET", "/track/shipments?" + params, headers=headers)
         response = connection.getresponse()
 
+=======
+    # Create an HTTPS connection to the DHL API
+    connection = http.client.HTTPSConnection("api-eu.dhl.com")
+
+    try:
+        # Send a GET request with the query parameters and headers
+        connection.request("GET", "/track/shipments?" + params, "", headers)
+        response = connection.getresponse()
+
+        # Check the HTTP status
+>>>>>>> Stashed changes
         status = response.status
         reason = response.reason
 
         if status == 200:
+<<<<<<< Updated upstream
+=======
+            # Parse the JSON response
+>>>>>>> Stashed changes
             data = json.loads(response.read())
             connection.close()
             return data
