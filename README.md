@@ -39,7 +39,7 @@ This application allows you to track the status of shipments using the DHL Shipm
 
 ## Usage
 
-1. **User Interaction **
+1. User Interaction
 
     ```bash
     streamlit run interface.py
